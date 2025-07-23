@@ -103,14 +103,15 @@ Ativar o wifi e carregar o layout de teclado correto:
 
 ```bash
 sudo wifi.sh
+> Logar na rede wifi
+
+ifconfig # Conferir se puxou IP
 
 
 sudo nano /opt/bootlocal.sh
-
 # Adicione ao fim do arquivo:
 loadkmap < /usr/share/kmap/qwerty/br-abnt2.kmap (ou br-abnt.kmap)
 
 # E então execute:
 filetool.sh -b
 ```
-
