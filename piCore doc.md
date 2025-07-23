@@ -18,7 +18,7 @@ Baixe a imagem do site e então extraia-a. Todos os comandos na documentação p
 
 ``````bash
 cd Downloads
-xz -d piCore64-16.0.0.img.gz
+gunzip -d piCore64-16.0.0.img.gz
 ``````
 
 Para flashear a imagem, pode-se usar o comando `dd`. Antes limparemos o cartão. 
