@@ -12,13 +12,13 @@
 
 ### 1. Baixando e flasheando a imagem
 
-A imagem utilizada nessa instalação é a piCore64-xx.x.x.img.gz, e o tutorial funciona especificamente para ela. Algumas etapas diferem com a versão do kernel, e baixar outra versão pode causar problemas.
+A imagem utilizada nessa instalação é a piCore64-16.0.0.img.gz, e o tutorial funciona especificamente para ela. Algumas etapas diferem com a versão do kernel, e baixar outra versão pode causar problemas.
 
-Baixe a imagem do site e então extraia-a. Todos os comandos na documentação presumem estar sendo executados pelo usuário root, e para acedê-lo, deve usar `sudo su -`
+Baixe a imagem do site e então extraia-a. Todos os comandos na documentação presumem estar sendo executados pelo usuário root, e para acedê-lo, deve preceder todo comando com `sudo`. **Não** é possível usar ``su -`` ou ``su root``, pois o usuário root ainda não está configurado.
 
 ``````bash
 cd Downloads
-xz -d piCore64-xx.x.x.img.gz
+xz -d piCore64-16.0.0.img.gz
 ``````
 
 Para flashear a imagem, pode-se usar o comando `dd`. Antes limparemos o cartão. 
@@ -33,7 +33,7 @@ fdisk /dev/sdx
 
 # Flasheando o cartão
 cd ~LOCALIZAÇÃO_DO_PICORE_IMG~
-dd if=piCore64...img of=/dev/sdx bs=1M status=progress conv=fsync
+dd if=piCore64-16.0.0.img of=/dev/sdx bs=1M status=progress conv=fsync
 fdisk -l # Certifique-se de que existem duas partições em /dev/sdx
 ``````
 
