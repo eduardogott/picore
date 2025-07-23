@@ -102,6 +102,10 @@ sudo vi /mnt/mmcblk0p2/tce/onboot.lst
 Ativar o wifi e carregar o layout de teclado correto:
 
 ```bash
+modprobe brcmfmac # Ativar o brcmfmac (driver de rede do Rasp)
+dmesg | grep brcmfmac # Verificar se o brcmfmac ativou corretamente
+
+
 sudo wifi.sh
 > Logar na rede wifi
 
