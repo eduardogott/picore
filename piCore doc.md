@@ -116,6 +116,9 @@ sudo nano /opt/bootlocal.sh
 # Adicione ao fim do arquivo:
 loadkmap < /usr/share/kmap/qwerty/br-abnt2.kmap (ou br-abnt.kmap)
 
+# NAO INCLUIR JAVA
+# NAO INCLUIR ICEDTEA
+
 # E então execute:
 filetool.sh -b
 ```
